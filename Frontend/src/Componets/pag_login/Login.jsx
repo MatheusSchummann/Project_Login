@@ -13,40 +13,40 @@ const Login_sign = () => {
   };
 
   return (
-    <div className='Container'> 
+    <div className='container'> 
       <form onSubmit={handleSubmit}>
         <h1>Welcome!</h1>
-          <div className="Email_Block">
+          <div className="log_block">
             <input 
               type="email" 
-              placeholder="E-mail" 
+              placeholder="e-mail" 
               required
               onChange={(e) => setUsername(e.target.value)}
             />
-              <FaUser ClassName="icon"/>
+              <FaUser className="icon"/>
           </div>
             
-          <div className="Password_Block">
+          <div className="log_block">
             <input 
               type="password" 
               placeholder="password"
               required
               onChange={(e) => setPassword(e.target.value)}
             />
-            <FaLock ClassName="lock"/>
+            <FaLock className="icon"/>
           </div>
 
           <div className="recall-forget">
             <label>
-              <input type="chechbox" />
-              Remind me 
+              <input type="checkbox" />
+              <span className="remind_me_message">Remind me </span>
             </label>
             <a href="#">Forget password</a>
           </div>
 
           <button>Confirm</button>
 
-        <div ClassName="signup-link"> 
+        <div className="signup-link"> 
           <p>No account? <a href="#">Signup</a></p>
         </div>
       </form>
