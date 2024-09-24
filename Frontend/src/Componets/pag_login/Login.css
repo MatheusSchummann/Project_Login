@@ -1,108 +1,129 @@
-.container {
-    width: 450px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    padding: 40px;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+  box-sizing: border-box;
+  text-shadow: #000;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("./image.png/background_login.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.main .container {
+  width: 450px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 40px;
+}
   
-  .container h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #ffff;
-  }
+.main .container h1 {
+  text-align: center;
+  font-size: 30px;
+  color: #ffff;
+}
   
-  .container .log_block {
-    position: relative;
-    width: 100%;
-    height: 50px;
-    margin: 30px auto;
-  }
+.main .container .log_block {
+  position: absolute;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px auto;
+}
 
   
-  .log_block input {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    outline: none;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 40px;
-    font-size: 16px;
-    color: #fff;
-    padding: 20px 45px 20px 25px;
-  }
+.main .log_block input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 25px;
+}
   
-  .log_block input::placeholder {
-    color: #fff;
-  }
+.log_block input::placeholder {
+  color: #fff;
+}
   
-  .log_block .icon {
-    position: absolute;
-    right: 25px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 16px;
-    color: #fff;
-  }
+.log_block .icon {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #fff;
+}
   
-  .container .recall-forget {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14.5px;
-    margin: -15px 0 15px;
-  }
+.container .recall-forget {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
   
-  .recall-forget .remind_me_message{
-    color:#fff;
-  }
+.recall-forget .remind_me_message{
+  color:#fff;
+}
 
-  .recall-forget label input {
-    accent-color: #fff;
-    margin-right: 4px;
-    border-radius: 10px;
-  }
+.recall-forget label input {
+  accent-color: #fff;
+  margin-right: 4px;
+  border-radius: 10px;
+}
   
-  .recall-forget a {
-    color: #fff;
-    text-decoration: none;
-  }
+.recall-forget a {
+  color: #fff;
+  text-decoration: none;
+}
   
-  .recall-forget a:hover {
-    text-decoration: underline;
-  }
+.recall-forget a:hover {
+  text-decoration: underline;
+}
   
-  .container button {
-    width: 100%;
-    height: 45px;
-    background: #fff;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    font-size: 16px;
-    color: #333;
-    font-weight: 700;
-    text-shadow: none;
-  }
+.container button {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 700;
+  text-shadow: none;
+}
   
-  .container .signup-link {
-    font-size: 14.5px;
-    text-align: center;
-    margin: 20px 0 15px;
-  }
-  .signup-link p{
-    color:#fff;
-    font-weight: 600;
-  }
+.container .signup-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+.signup-link p{
+  color:#fff;
+  font-weight: 600;
+}
   
-  .signup-link p a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-  }
+.signup-link p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
   
-  .signup-link p a:hover {
-    text-decoration: underline;
-  }
+.signup-link p a:hover {
+  text-decoration: underline;
+}

@@ -1,12 +1,12 @@
 
 import "./App.css";
-import Login_sign from "./Componets/pag_login/login";
 
+import { Outlet } from "react-router-dom";
 function App() {
 
   return (
-    <div className="App">
-      <Login_sign/>
+    <div>
+      <Outlet/>
     </div>
   );
 }
