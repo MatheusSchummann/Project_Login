@@ -1,53 +1,71 @@
-import { useState } from "react";
-import {FaUser, FaLock} from "react-icons/fa";
+import { useState, useRef, useEffect } from "react";
+import { FaUser, FaLock, FaCcApplePay } from "react-icons/fa";
 import "./Login.css";
 
+
 const Login_sign = () => {
+  console.log("random");
 
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  //const confirmlog = useRef(null)
+  
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
 
+  const [formData, setFormData] = useState({ email: '', password: '' });
+  
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert("Sending data " + username + password);
+    setFormData({ email: emailRef.current.value, password: passwordRef.current.value})
   };
+
+  console.log("teste2", formData);
+
+  const onChange = (e) => {
+
+    console.log('passwordRef :>> ', passwordRef);
+    /* console.log("evento", e)
+     setFormData({ ...formData, [e?.target?.name]: e?.target?.value })
+     console.log('formData', formData)*/
+  }
 
   return (
     <div className="main">
-      <div className='container'> 
+      <div className='container'>
         <form onSubmit={handleSubmit}>
           <h1>Welcome!</h1>
-            <div className="log_block">
-              <input 
-                type="email" 
-                placeholder="e-mail" 
-                required
-                onChange={(e) => setUsername(e.target.value)}
-              />
-                <FaUser className="icon"/>
-            </div>
-            
-            <div className="log_block">
-              <input 
-                type="password" 
-                placeholder="password"
-                required
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              <FaLock className="icon"/>
-            </div>
+          <div className="log_block">
+            <input
+              name="email"
+              type="email"
+              placeholder="e-mail"
+              required
+              ref={emailRef}
+            />
+            <FaUser className="icon" />
+          </div>
 
-            <div className="recall-forget">
-              <label>
-                <input type="checkbox" />
-                <span className="remind_me_message">Remind me </span>
-              </label>
-              <a href="#">Forget password</a>
-            </div>
+          <div className="log_block">
+            <input
+              name="password"
+              type="password"
+              placeholder="password"
+              required
+              ref={passwordRef}
+            />
+            <FaLock className="icon" />
+          </div>
 
-            <button>Confirm</button>
+          <div className="recall-forget">
+            <label>
+              <input type="checkbox" id="inputID" />
+              <span className="remind_me_message">Remind me </span>
+            </label>
+            <a href="#">Forget password</a>
+          </div>
 
-          <div className="signup-link"> 
+          <button>Confirm</button>
+
+          <div className="signup-link">
             <p>No account? <a href="#">Signup</a></p>
           </div>
         </form>

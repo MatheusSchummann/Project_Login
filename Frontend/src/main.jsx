@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-
 import{createBrowserRouter, RouterProvider} from "react-router-dom";
 
 import Home from "./Componets/pag_home/home.jsx";
@@ -19,7 +18,6 @@ const router = createBrowserRouter([
   },
 
 ]);
-
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
